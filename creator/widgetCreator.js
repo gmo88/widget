@@ -40,6 +40,6 @@ const renderWidget = (weatherObject) => {
   return a;
 };
 
-export {renderWidget};
+//export {renderWidget};
 
 

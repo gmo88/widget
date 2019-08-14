@@ -18,4 +18,4 @@ const parser = param => {
   };
 };
 
-export default parser;
+//export default parser;
