@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../images/google-now-wallpaper-2.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    opacity: .9;
+}
+
+.widget {
+    z-index: 1000;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f4edff;
+    opacity: .8 !important;
+}
+
+.widget button {
+    border: none;
+    background: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.item {
+    text-align: center;
+    display: flex;
+}
+
+.item:nth-child(1) {
+    font-size: 35px;
+    align-items: center;
+}
+
+.item:nth-child(2) {
+    font-size: 25px;
+    align-items: center;
+    justify-self: center;
+}
+
+.item:nth-child(3) {
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item:nth-child(3):after {
+    content: "\f40d";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.item:nth-child(3):hover {
+    color: forestgreen;
+}
+
+.item:nth-child(4) {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(4):before {
+    content: "\f289";
+    font-family: "Font Awesome 5 Brands";
+}
+
+
+.item:nth-child(5) {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(6) {
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:nth-child(7), .item:nth-child(8), .item:nth-child(9) {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cloud-big {
+    width: 155px;
+    height: 60px;
+    border-radius: 60px;
+    background: #DCDCDC;
+    position: absolute;
+    top: 460px;
+    left: 600px;
+    animation: cloud 125s normal infinite;
+}
+
+@keyframes cloud {
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        top: 260px;
+        left: 190px;
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+}
+
+.cloud-big:before, .cloud-big:after, .cloud-small:before, .cloud-small:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud-big:before {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 20px;
+}
+
+.cloud-big:after {
+    width: 60px;
+    height: 60px;
+    top: -27px;
+    left: 75px;
+}
+
+.big {
+    top: 160px;
+    animation: big 55s normal 1s infinite;
+}
+
+@keyframes big {
+    60% {
+        opacity: .9;
+    }
+
+    65% {
+        top: 260px;
+        left: 100px;
+        opacity: 0;
+    }
+    70% {
+        opacity: .9;
+    }
+}
+
+/*from left cloud small*/
+.cloud-small {
+    width: 115px;
+    height: 40px;
+    border-radius: 60px;
+    background: #DCDCDC;
+    position: absolute;
+    top: 480px;
+    left: 1000px;
+    animation: cloud2 120s normal 1s infinite;
+}
+
+@keyframes cloud2 {
+    70% {
+        opacity: .8;
+    }
+    80% {
+        top: 560px;
+        left: 190px;
+        opacity: 0;
+    }
+    90% {
+        opacity: .7;
+    }
+
+}
+
+.cloud-small:before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 15px;
+}
+
+.cloud-small:after {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 63px;
+}
+
+/*from right cloud small*/
+.small {
+    animation: small 60s normal 3s infinite forwards;
+}
+
+@keyframes small {
+    45% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 460px;
+        left: 100px;
+        opacity: 0;
+    }
+    55% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 480px) { {
+
+}
+}
